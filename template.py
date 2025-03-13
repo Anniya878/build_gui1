@@ -1,0 +1,27 @@
+from tkinter import*
+import calendar
+windows = Tk()
+windows.geometry('400x300')
+windows.title("template")
+windows.config(background = "orchid1")
+def show_calendar():
+    year = int(enter.get())
+    windows2 = Tk()
+    windows2.geometry('400x300')
+    windows2.title("template")
+    cal = calendar.calendar(year)
+    show = Label(windows2, text = cal, bg = "orchid1", fg = "snow2")
+    show.place(x = 50, y = 50)
+windows.config(background = "orchid1")
+title = Label(windows, text = "Calendar", bg = "orchid1", fg = "snow2", font=("times", 28, 'bold') )
+title.place(x = 125, y = 60)
+sub_title = Label(windows, text = "Enter your year", bg = "orchid1", fg = "snow2", font = ("times", 28, 'bold'))
+sub_title.place(x = 90, y = 115)
+enter = Entry()
+enter.place(x = 135, y = 175)
+submit = Button(windows, text = "Submit", bg = "orchid1", fg = "snow2", command  = show_calendar )
+submit.place(x = 170, y = 200)
+exit = Button(windows, text = "Exit", bg = "orchid1", fg = "snow2", command = exit)
+exit.place(x =180 , y = 230)
+windows.mainloop()
+
